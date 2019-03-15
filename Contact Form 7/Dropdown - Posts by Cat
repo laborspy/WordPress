@@ -30,7 +30,7 @@ add_filter( 'posts_search', '__search_by_title_only', 500, 2 );
 
 $query = new WP_Query(
     array(
-        's'         => 'careers',
+        's'         => 'YOUR CAT HERE',
         'cat'       => array( 7 ),
         'orders'    => 'DESC',
         'showposts' => 6
