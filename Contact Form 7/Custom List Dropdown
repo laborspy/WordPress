@@ -1,3 +1,13 @@
+*********************************
+*  Add to Contact Form Template *
+*********************************
+
+[customlist careers]
+
+
+*************************
+*  Add to Functions.php *
+*************************
 
 add_action( 'wpcf7_init', 'custom_add_form_tag_customlist' );
 
