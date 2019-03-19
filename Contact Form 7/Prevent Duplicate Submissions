@@ -1,4 +1,5 @@
 /**
+ * Add to functions.php
  * @param $result WPCF7_Validation
  * @param $tag array
  * @return WPCF7_Validation
