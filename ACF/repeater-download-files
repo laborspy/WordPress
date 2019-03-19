@@ -1,12 +1,15 @@
 <?php
     // check if the repeater field has rows of data
-    if( have_rows('forms') ):
+    if( have_rows('doc') ):
+					?>
+		<h2 class="post__title">Insurance/Benefits</h2>
+	<?php
       // loop through the rows of data
-      while ( have_rows('forms') ) : the_row();
-        $event_file = get_sub_field('event_file');
-        $title = $event_file["title"];
-        $url = $event_file["url"];
-        if( $event_file ) { ?>
+      while ( have_rows('doc') ) : the_row();
+        $file = get_sub_field('document');
+        $title = $file["title"];
+        $url = $file["url"];
+        if( $file ) { ?>
           <a href="<?php echo $url; ?>"><?php echo $title; ?></a><br>                
         <?php
         }
