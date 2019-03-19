@@ -1,0 +1,29 @@
+***********
+*   CSS   *
+***********
+
+#mybutton {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+	z-index: 999;
+}
+
+.notify {
+  background-color : #f58220;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 70px;
+  border-color: #f58220;
+}
+
+
+****************************
+*   Place before </body>   *
+****************************
+
+<div id="mybutton">
+<button class="notify">
+  <a style="color: white;" href="#" data-toggle="modal" data-target=".fusion-modal.pop-up">
+  <i class="far fa-paper-plane fa-2x"></i></a></button>
+</div>
