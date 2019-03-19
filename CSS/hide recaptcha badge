@@ -1,0 +1,6 @@
+
+
+
+.grecaptcha-badge{
+	visibility: collapse !important;  
+}
