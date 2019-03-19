@@ -1,0 +1,19 @@
+<?php
+    // check if the repeater field has rows of data
+    if( have_rows('forms') ):
+      // loop through the rows of data
+      while ( have_rows('forms') ) : the_row();
+        $event_file = get_sub_field('event_file');
+        $title = $event_file["title"];
+        $url = $event_file["url"];
+        if( $event_file ) { ?>
+          <a href="<?php echo $url; ?>"><?php echo $title; ?></a><br>                
+        <?php
+        }
+            //view all data values
+        //var_dump($event_file);
+     endwhile;
+    else :
+        // no rows found
+    endif;
+?>
