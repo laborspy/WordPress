@@ -1,0 +1,51 @@
+
+
+***************
+*     CSS     *
+***************
+ /* Contact Form 7 Mods*/
+.wpcf7-form input {
+border-radius:6px;             /* Makes the edges rounded */
+}
+.wpcf7-form textarea {
+border-radius:6px;          /* Makes the edges rounded */
+}
+.wpcf7-form .wpcf7-submit {     
+background:#00a6ca;         /* This edit the button colour */
+}
+
+
+.wpcf7 .wpcf7-text,
+.wpcf7 .wpcf7-textarea{
+  padding-left: 45px !important;
+}
+
+.wpcf7 p{ position: relative; }
+.wpcf7 p .fa{
+  position: absolute;
+  color: #666666;
+  z-index: 100;
+  font-size: 18px;
+  top: 28%;
+  left: 1.5%;
+}
+.wpcf7 p .fa-pencil{ top: 5%; left: 1.5%}
+
+
+
+
+***************
+* CF7 Coding  *
+***************
+
+<p><span class="fa fa-user"></span>[text* your-name placeholder "Your Name (required)"]</p>
+
+<p><span class="fa fa-envelope"></span>[email* your-email placeholder "Your Email (required)"]</p>
+
+<p><span class="fa fa-phone"></span>[tel* Telephone placeholder "Your Phone (required)"]</p>
+
+<p><span class="fa fa-address-card-o"></span>[text company placeholder "Company"]</p>
+
+<p><span class="fa fa-pencil"></span>[textarea* your-message placeholder "Message (required)"]</p>
+
+[submit "Send"]
