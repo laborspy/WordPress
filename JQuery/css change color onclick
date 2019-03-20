@@ -1,0 +1,10 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+<script type="text/javascript">
+
+	jQuery('#ID-CLICKED-ON').click(function(){
+			$('#ID-CHANGING-ID').css({
+       			 'opacity': '1.0',
+    			});	
+		})
+
+</script>
