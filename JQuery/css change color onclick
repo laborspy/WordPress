@@ -1,6 +1,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
 <script type="text/javascript">
 
+//Changes the color onclick or in this instance a div's opacity.
+
 	jQuery('#ID-CLICKED-ON').click(function(){
 			$('#ID-CHANGING-ID').css({
        			 'opacity': '1.0',
