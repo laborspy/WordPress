@@ -14,7 +14,7 @@
         <?php
         }
             //view all data values
-        //var_dump($event_file);
+        //var_dump($document);
      endwhile;
     else :
         // no rows found
