@@ -1,0 +1,16 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+<script type="text/javascript">
+
+// If ia text field is empty then fire event, in this case
+// we're changing the opacity of a div.  Placeholder text
+// is still considered blank.
+
+		jQuery("#rp_autocompletemap").blur(function() {
+		   if($(this).val() == '') {
+				$('#radius-shade').css({
+				    'opacity': '0.5',
+				});
+			}
+		});
+
+</script>
