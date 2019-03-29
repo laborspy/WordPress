@@ -1,0 +1,13 @@
+************************
+* add to functions.php *
+************************
+
+
+function remove_canonical() {
+
+    // Disable for 'search' page
+    if ( is_page(12891) ) {
+        add_filter( 'wpseo_canonical', '__return_false',  10, 1 );
+    }
+}
+add_action('wp', 'remove_canonical');
