@@ -1,0 +1,21 @@
+************************************
+*  Include this before other code  *
+*  file must be in sub-directory   *
+*  to use.                         *
+************************************
+
+
+<?php
+    //Include the wp-load.php file
+    include('wp-load.php');
+    //As this is external file, we aren't using the WP theme here. So setting this as false
+    define('WP_USE_THEMES', false);
+    //Optional, adding the WP blog header which will include the wordpress head in the file
+    require('wp-blog-header.php');
+    // Edit your code below
+    if(is_user_logged_in() ) {
+        $user = wp_get_current_user();
+        $role = (array) $user->roles;
+        echo "role is ".$role[0];
+    }
+?>
