@@ -1,0 +1,3 @@
+.rev_slider_wrapper {
+ border-bottom: 0 !important;
+}
