@@ -1,0 +1,15 @@
+Where 'client' is your post type
+
+function laborspy_dequeue_styles(){
+	if ( is_singular( 'client' ) ) {        
+	    wp_dequeue_style('avada-stylesheet');
+        wp_deregister_style('avada-stylesheet');
+	
+        wp_dequeue_style('fusion-dynamic-css');
+        wp_deregister_style('fusion-dynamic-css');
+		
+		wp_dequeue_style('avada-IE');
+        wp_deregister_style('avada-IE');
+	}
+    }
+    add_action( 'wp_print_styles', 'laborspy_dequeue_styles', 9999 );
