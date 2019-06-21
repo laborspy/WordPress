@@ -1,0 +1,7 @@
+** Make CSS item for menu titled .menu-no-link
+
+** Add to Customer CSS
+
+.menu-no-link > a:hover{
+	cursor: default;
+}
