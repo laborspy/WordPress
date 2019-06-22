@@ -1,0 +1,10 @@
+*** Add to functions.php
+
+
+
+
+add_action( 'init', 'add_product_cat_to_custom_post_type',11 );
+
+function add_product_cat_to_custom_post_type() {
+register_taxonomy_for_object_type( 'product_cat', 'custom-postype-name' );
+}
