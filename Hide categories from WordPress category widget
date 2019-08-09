@@ -1,0 +1,7 @@
+//Hide categories from WordPress category widget
+function exclude_widget_categories($args){
+    $exclude = "7,88";
+    $args["exclude"] = $exclude;
+    return $args;
+}
+add_filter("widget_categories_args","exclude_widget_categories");
