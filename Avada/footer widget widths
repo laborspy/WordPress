@@ -1,0 +1,17 @@
+
+
+.fusion-column.col-lg-3.col-md-3.col-sm-3:first-child {
+	width:10%;
+}
+
+.fusion-column.col-lg-3.col-md-3.col-sm-3:nth-child(2) {
+	width:40%;
+}
+
+.fusion-column.col-lg-3.col-md-3.col-sm-3:nth-child(3) {
+	width:25%;
+}
+
+.fusion-column.col-lg-3.col-md-3.col-sm-3:nth-child(4) {
+	width:25%;
+}
