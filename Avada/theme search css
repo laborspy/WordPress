@@ -1,0 +1,13 @@
+
+.fusion-custom-menu-item-contents{
+	border-radius: 25px;
+	Margin-top: -10px;
+}
+
+.searchform .fusion-search-form-content .fusion-search-button input[type=submit] {
+	background: #4872ae ;
+}
+
+.searchform .fusion-search-form-content .fusion-search-button input[type=submit]:hover{
+	background:#e42926 !important;
+}
