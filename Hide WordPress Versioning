@@ -1,0 +1,24 @@
+// Remove - Yoast comment tags
+add_action('wp_head',function() { ob_start(function($o) {
+return preg_replace('/^\n?<!--.*?[Y]oast.*?-->\n?$/mi','',$o);
+}); },~PHP_INT_MAX);
+
+// Hide WordPress Version Number & More
+remove_action('wp_head', 'wp_generator');
+function remove_wp_version_rss() {
+ return'';
+ }
+
+function remove_version_info() {
+     return '';
+}
+add_filter('the_generator', 'remove_version_info');
+
+ 
+add_filter('the_generator','remove_wp_version_rss');
+
+// Remove - Slider Revolition tags
+function remove_revslider_meta_tag() {
+  return '';
+}
+add_filter( 'revslider_meta_generator', 'remove_revslider_meta_tag' );
