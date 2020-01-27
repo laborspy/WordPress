@@ -1,0 +1,17 @@
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+var target = document.location.hash.replace("#", "");
+if (target.length) {
+    if(target=="modal1link"){
+      $('#modal1').modal('show');
+    }
+    else if(target=="modal2link"){
+      $('#modal2').modal('show');
+    }
+else if(target=="modal3link"){
+      $('#modal3').modal('show');
+    }
+}else{    
+}
+});
+</script>
