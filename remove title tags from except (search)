@@ -1,0 +1,32 @@
+
+************************************************
+* add to functions.php to strip all title tags *
+************************************************
+
+function bac_wp_strip_header_tags( $text ) {
+    $raw_excerpt = $text;
+    if ( '' == $text ) {
+        //Retrieve the post content.
+        $text = get_the_content(''); 
+        //remove shortcode tags from the given content.
+        $text = strip_shortcodes( $text );
+        $text = apply_filters('the_content', $text);
+        $text = str_replace(']]>', ']]&gt;', $text);
+     
+        //Regular expression that strips the header tags and their content.
+        $regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+        $text = preg_replace($regex,'', $text);
+     
+        /***Change the excerpt word count.***/
+        $excerpt_word_count = 55; //This is WP default.
+        $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
+         
+        /*** Change the excerpt ending.***/
+        $excerpt_end = '[...]'; //This is the WP default.
+        $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+         
+        $excerpt = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+        }
+        return apply_filters('wp_trim_excerpt', $excerpt, $raw_excerpt);
+}
+add_filter( 'get_the_excerpt', 'bac_wp_strip_header_tags', 5);
