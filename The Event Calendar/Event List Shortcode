@@ -1,0 +1,19 @@
+//
+// Add to functions.php
+// shortcode is [eventz]
+
+
+function eventz_function() {
+global $post;
+ $output = '<ul>';
+ $events = tribe_get_events( [ 'posts_per_page' => 5 ] );
+ 
+foreach ( $events as $post ) {
+   setup_postdata( $post );
+    $output .= '<li><a class="has-icon" href="' . tribe_get_event_link() .' " title="' . $post->post_title .'"><i class="material-icons">arrow_right</i><span>' . $post->post_title . '</a> ' . tribe_get_start_date( $post ) . '</li>';
+}
+$output .= '</ul>';  
+	return $output;
+}
+
+add_shortcode('eventz', 'eventz_function');
