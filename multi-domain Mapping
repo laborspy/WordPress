@@ -1,0 +1,15 @@
+*********************************************
+*   Add below lines to wp-config.php        *
+*                                           *
+* Place below lines after the table_prefix  *
+* line; order is very important             *
+*********************************************
+
+
+
+
+/*
+ * Handle multi domain into single instance of wordpress installation
+ */
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
