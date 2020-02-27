@@ -1,4 +1,15 @@
 *********************************************
+*   Add below lines to .htaccess            *
+*                                           *
+*********************************************
+
+<FilesMatch ".(eot|ttf|otf|woff)">
+Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+ 
+
+
+*********************************************
 *   Add below lines to wp-config.php        *
 *                                           *
 * Place below lines after the table_prefix  *
