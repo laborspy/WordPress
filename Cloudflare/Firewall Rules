@@ -1,0 +1,14 @@
+
+*
+* Block requests for anything that is in the plugins directory, that wasn't 
+* made by the website itself, and not already listed as a bot 
+*
+
+(http.request.uri.path contains " /wp-content/plugins/" and not http.referer contains "domain.com" and not cf.client.bot)
+
+
+*
+* Block XML-RPC requests
+*
+
+(http.request.uri.path eq "/xmlrpc.php")
