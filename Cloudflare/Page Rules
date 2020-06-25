@@ -1,0 +1,26 @@
+
+
+1.) Do not cache anything to do with the WP Admin site
+
+domain.com/wp-admin/*
+Cache Level - Bypass
+
+
+2.) Do not cache search results page to allow dynamic results
+
+domain.com/?s*
+Cache Level - Bypass
+
+
+3.) Cache anything else possible at the edge router
+
+domain.com/*
+Always online = On
+Cache Level - Cache Everything
+Edge Cache TTL - 1month
+
+** With #3 remember when caching everything to respect the existing 
+headers or Cloudflare will tell the browser to cache HTML files
+Caching > Configuration > Browser Cache TTL = Respect Existing Headers
+
+
