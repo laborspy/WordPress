@@ -22,5 +22,10 @@ Edge Cache TTL - 1month
 ** With #3 remember when caching everything to respect the existing 
 headers or Cloudflare will tell the browser to cache HTML files
 Caching > Configuration > Browser Cache TTL = Respect Existing Headers
+or just do #4
 
+4.) Cache just the uploads directory
 
+domain.com/wp-content/*
+Cache Level - Cache Everything
+Edge Cache TTL - 1month
