@@ -1,0 +1,11 @@
+function po_disable_manager( $available_gateways ) 
+
+{
+global $woocommerce;
+if ( isset( $available_gateways['purchase_order_gateway'] ) && current_user_can('customer') ) {
+   unset( $available_gateways['purchase_order_gateway'] );
+}
+   return $available_gateways;
+}
+
+add_filter( 'woocommerce_available_payment_gateways','po_disable_manager' );
