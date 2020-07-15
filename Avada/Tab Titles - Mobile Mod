@@ -1,0 +1,34 @@
+////////////////////////////////
+// Moves Tab Titles to the top
+////////////////////////////////
+
+@media only screen and (max-width: 800px) {
+.nav {
+    display: block !important;
+}
+.fusion-mobile-tab-nav {
+    display: none !important;
+}
+.fusion-tabs.clean .nav-tabs{
+    text-align: center;
+}
+}
+
+/////////////////////////////////////////////
+// Moves Tab Titles to the top side by side
+/////////////////////////////////////////////
+
+@media only screen and (max-width: 800px) {
+    .nav {
+        display: block !important;
+    }
+    .fusion-mobile-tab-nav {
+        display: none !important;
+    }
+    .fusion-tabs .nav-tabs li{
+        display: inline-block;   
+    }
+    .fusion-tabs.clean .nav-tabs{
+        text-align: center;
+    }
+}
