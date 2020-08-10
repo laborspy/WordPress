@@ -1,3 +1,9 @@
+******************************************
+*  1. update "your-class-name"
+*  2. Add to the script area in Avada.
+******************************************
+
+
 <script>
 jQuery(document).ready(function($){
         var maxCBHeight = 0;
