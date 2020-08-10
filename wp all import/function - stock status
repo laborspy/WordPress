@@ -1,0 +1,35 @@
+******************************************
+*  Example on how to use a custom stock status
+*  and sync to WooCommerce.
+******************************************
+
+
+
+
+***********************************
+*  Place in wp all import 
+*  stock status field
+***********************************
+
+[stock_availability({availability[1]})]
+
+***********************************
+*  Place in wp all import 
+*  function editor for that import
+***********************************
+
+<?php
+function stock_availability($Availability) {
+if ($Availability == 'Today'){
+ return "instock";
+}
+elseif ($Availability == 'By Next Day')
+{
+ return "instock";
+} 
+else
+{
+ return "outofstock";
+}
+}
+?>
