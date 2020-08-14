@@ -1,0 +1,29 @@
+
+
+
+<div class="SampleSection Confidence" style="padding: 15px 12px 10px 0; margin: -7px 15px;"><label for="confidenceLevel">Confidence Level:</label><br />
+<select id="confidenceLevel" style="padding: 0 0; margin: 0 0;" name="confidenceLevel"><option value="1.6448">90%</option><option selected="selected" value="1.9599">95%</option><option value="2.575">99%</option></select></div>
+<div class="SampleSection PopulationSize" style="padding: 5px 12px 10px 0; margin: -7px 15px;"><label for="populationSize">Population Size:</label><br />
+<input id="populationSize" style="padding: 0 0; margin: 0 0;" name="populationSize" type="text" value="10000" /></div>
+<div class="SampleSection" style="padding: 5px 12px 5px 0; margin: -7px 15px;"><label for="marginOfError">Margin of Error:</label><br />
+<select id="marginOfError" style="padding: 0 0; margin: 0 0;" name="marginOfError"><option value=".01">1%</option><option value=".02">2%</option><option value=".03">3%</option><option value=".04">4%</option><option selected="selected" value=".05">5%</option><option value=".06">6%</option><option value=".07">7%</option><option value=".08">8%</option><option value=".09">9%</option><option value=".10">10%</option></select></div>
+<div class="SampleSection SampleBox" style="padding: 30px 12px 5px 12px; margin: 0px 5px;"><label for="SampleSize">Ideal Sample Size:</label><br />
+<input id="SampleSize" name="SampleSize" readonly="readonly" type="text" /></div>
+<p>
+
+<script type="text/javascript">
+function calculateSS(){
+ 	var confidenceLevel = document.getElementById('confidenceLevel').value; 				
+        var populationSize = document.getElementById('populationSize').value;
+ 	var marginOfError = document.getElementById('marginOfError').value;
+	var noTop = ((confidenceLevel*confidenceLevel)*.25);
+ 	var noBottom = (marginOfError*marginOfError);
+ 	var no = noTop/noBottom;
+ 	var sampleSize = Math.ceil(no/(1+no/populationSize));
+	document.getElementById('SampleSize').value = sampleSize;
+ 			}
+calculateSS();
+document.getElementById('confidenceLevel').addEventListener('change', calculateSS);
+document.getElementById('marginOfError').addEventListener('change', calculateSS);
+document.addEventListener('keyup', calculateSS);
+</script></p>
