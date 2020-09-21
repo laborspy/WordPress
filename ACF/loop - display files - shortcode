@@ -1,0 +1,34 @@
+function careers_function() {
+  // WP_Query arguments
+$args = array (
+	'post_type'              => array( 'careers' ),
+	'post_status'            => array( 'publish' ),
+	'nopaging'               => true,
+	'order'                  => 'ASC',
+	'orderby'                => 'menu_order',
+);
+
+// The Query
+$careers = new WP_Query( $args );
+
+// The Loop
+if ( $careers->have_posts() ) {
+    $string = "";
+     $string .= "<ul>";
+	while ( $careers->have_posts() ) {
+	   $careers->the_post();
+		// do something 
+		$url = get_field('pdf_attachment');
+		$title = get_field('job_title');
+     $string .=   '<li><a href='. $url.'>'.$title.'</a></li>';
+	}
+} else {
+	// no posts found
+}
+    $string .=  "</ul>";
+ return $string;
+// Restore original Post Data
+wp_reset_postdata();
+}
+
+add_shortcode('careers', 'careers_function');
