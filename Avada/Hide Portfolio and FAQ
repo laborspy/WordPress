@@ -1,0 +1,9 @@
+function avada_deregister_post_type(){
+unregister_post_type( 'avada_portfolio' );
+unregister_post_type( 'avada_faq' );
+unregister_taxonomy( 'portfolio_category');
+unregister_taxonomy( 'portfolio_tags');
+unregister_taxonomy( 'portfolio_skills');
+unregister_taxonomy( 'faq_category');
+}
+add_action('init','avada_deregister_post_type');
